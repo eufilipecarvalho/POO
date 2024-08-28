@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class MediaAritmetica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] valores = new int[5];
+        int soma = 0;
+        
+        // Ler os 5 valores
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o valor " + (i + 1) + ": ");
+            valores[i] = scanner.nextInt();
+            soma += valores[i];
+        }
+        
+        // Calcular a média aritmética
+        double media = (double) soma / 5;
+        
+        // Exibir os valores digitados
+        System.out.println("\nValores digitados:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Valor " + (i + 1) + ": " + valores[i]);
+        }
+        
+        // Exibir a média aritmética
+        System.out.printf("\nMédia aritmética: %.2f\n", media);
+        
+        scanner.close();
+    }
+}
